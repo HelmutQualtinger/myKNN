@@ -23,7 +23,8 @@ def plotly_plot(observations, labels):
             zaxis=dict(title='Z-axis')
         ),
         width=1200,  # Set the width of the figure
-        height=800  # Set the height of the figure
+        height=800,  # Set the height of the figure
+        template='plotly_dark'  # Set dark theme
     )
 
     # Create 2D scatter plot of x and y
@@ -46,8 +47,8 @@ def plotly_plot(observations, labels):
         yaxis=dict(title='Y-axis', showgrid=True),
         width=900,
         height=600,
-        showlegend=False
-
+        showlegend=False,
+        template='plotly_dark'  # Set dark theme
     )
 
     # Create subplots with the 3D scatter plot and the 2D scatter plot
@@ -59,10 +60,12 @@ def plotly_plot(observations, labels):
     fig.add_trace(fig1.data[0], row=1, col=2)
 
     # Update layout for the subplots
-    fig.update_layout(height=600, width=1200, showlegend=False)
+    fig.update_layout(height=600, width=1200, showlegend=False,
+                      template='plotly_dark')  # Set dark theme
 
     # Write the HTML file and show the figure
+
     fig.show(width=800, height=600)
-    fig1.write_html("scatter_plot.html")
+    fig.write_html("scatter_plot.html")
 
 # ...

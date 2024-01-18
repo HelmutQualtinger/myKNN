@@ -15,7 +15,7 @@ import numpy as np
 from plottingObservations import plotly_plot
 
 OBSERVATIONS = 5000  # how many observations to generate
-PARAMETERS = 5  # how many parameters to generate for each observation
+PARAMETERS = 8  # how many parameters to generate for each observation
 LABELS = 5      # how many labels to generate for each observation
 TESTS = 1000     # how many tests to run
 
